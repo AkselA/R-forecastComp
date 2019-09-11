@@ -48,6 +48,10 @@ add_data <- function(projname) {
     tmp.env <- new.env()
     source(datapath, local=tmp.env)
     tmp.list <- as.list(tmp.env, sorted=TRUE)
+    if (length(tmp.list) == 0) {
+    	message("No objects found in data.R")
+    	return(NULL)
+    }
     files <- file.path(projname, "data", paste0(names(tmp.list), ".rda"))
     obj <- mapply(save, list=names(tmp.list), file=files, 
       MoreArgs=list(compress="xz", envir=tmp.env))

@@ -3,3 +3,10 @@
 ^data\.R$
 ^documenting\.R$
 ^commit\.command$
+^data\.R
+documenting\.R
+commit\.command
+\.pdf$
+\.png$
+^__.*
+^\.DS_Store$

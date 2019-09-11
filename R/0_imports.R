@@ -3,5 +3,6 @@
 #' @import graphics
 #' @import datasets
 #' @import grDevices
+#' @import forecast
 
 NULL
